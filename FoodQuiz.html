@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <!--
+    ⣿⣿⣿⣿⣿⠟⠋⠄⠄⠄⠄⠄⠄⠄⠄⢁⠈⢻⢿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠈⡀⠭⢿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⡟⠄⢀⣾⣿⣿⣿⣷⣶⣿⣷⣶⣶⡆⠄⠄⠄⣿⣿⣿⣿
+    ⣿⣿⣿⣿⡇⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠄⠄⢸⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣇⣼⣿⣿⠿⠶⠙⣿⡟⠡⣴⣿⣽⣿⣧⠄⢸⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣾⣿⣿⣟⣭⣾⣿⣷⣶⣶⣴⣶⣿⣿⢄⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⡟⣩⣿⣿⣿⡏⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣹⡋⠘⠷⣦⣀⣠⡶⠁⠈⠁⠄⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣍⠃⣴⣶⡔⠒⠄⣠⢀⠄⠄⠄⡨⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣦⡘⠿⣷⣿⠿⠟⠃⠄⠄⣠⡇⠈⠻⣿⣿⣿⣿
+    ⣿⣿⣿⣿⡿⠟⠋⢁⣷⣠⠄⠄⠄⠄⣀⣠⣾⡟⠄⠄⠄⠄⠉⠙⠻
+
+
+    ░░░▐▀▀▄█▀▀▀▀▀▒▄▒▀▌░░░░
+    ░░░▐▒█▀▒▒▒▒▒▒▒▒▀█░░░░░
+    ░░░░█▒▒▒▒▒▒▒▒▒▒▒▀▌░░░░
+    ░░░░▌▒██▒▒▒▒██▒▒▒▐░░░░
+    ░░░░▌▒▒▄▒██▒▄▄▒▒▒▐░░░░
+    ░░░▐▒▒▒▀▄█▀█▄▀▒▒▒▒█▄░░
+    ░░░▀█▄▒▒▐▐▄▌▌▒▒▄▐▄▐░░░
+    ░░▄▀▒▒▄▒▒▀▀▀▒▒▒▒▀▒▀▄░░
+    ░░█▒▀█▀▌▒▒▒▒▒▄▄▄▐▒▒▐░░
+    ░░░▀▄▄▌▌▒▒▒▒▐▒▒▒▀▒▒▐░░
+    ░░░░░░░▐▌▒▒▒▒▀▄▄▄▄▄▀░░
+    ░░░░░░░░▐▄▒▒▒▒▒▒▒▒▐░░░
+    ░░░░░░░░▌▒▒▒▒▄▄▒▒▒▐░░░
+    -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ9LC93RV7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-VQ9LC93RV7');
+    </script>
+    <meta charset="UTF-8">
+    <title>測測看你是不是拌人 | 測驗</title>
+    <link rel="icon" type="image/x-icon" href="Nyan Cat.ico">
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        body{
+            font-family: "Noto Sans TC", sans-serif;
+            margin: 1;
+            padding: 0;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .h3 {
+            text-align: center;
+        }
+
+        .p {
+            text-align: center;
+            color: rgb(90, 167, 255);
+            font-size: 30px;
+            font-family: "Noto Sans TC", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .question {
+            margin-bottom: 80px;
+        }
+
+        .button {
+            font-family: "Noto Sans Mono CJK TC Regular", sans-serif;
+            font-weight: 600;
+            border: none;
+            color: black;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: white;
+            border: 2px solid #04AA6D;
+            transition-duration: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #00a954;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-weight: 900;" >拌不拌？</h1>
+    <h3 class="h3">創建者：<img src="Threads_logo.png" width="19" height="19">zhang._.zyy</a></h3>
+
+    <form id="FoodQuiz">
+    <!-- 問題 1 -->
+    <div id="Curry">
+        <h3>1. 咖哩拌不拌？</h3>
+        <label>
+            <input type="radio" name="Curry" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Curry" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Curry" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 2 -->
+    <div id="CenturyEggTofu">
+        <h3>2. 皮蛋豆腐拌不拌？</h3>
+        <label>
+            <input type="radio" name="CenturyEggTofu" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="CenturyEggTofu" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="CenturyEggTofu" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 3 -->
+    <div id="BraisedPorkRice">
+        <h3>3. 滷肉飯拌不拌？</h3>
+        <label>
+            <input type="radio" name="BraisedPorkRice" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="BraisedPorkRice" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="BraisedPorkRice" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 4 -->
+    <div id="ShavedIce">
+        <h3>4. 剉冰拌不拌？</h3>
+        <label>
+            <input type="radio" name="ShavedIce" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ShavedIce" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ShavedIce" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 5 -->
+    <div id="ColdNoodles">
+        <h3>5. 涼麵拌不拌？</h3>
+        <label>
+            <input type="radio" name="ColdNoodles" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ColdNoodles" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ColdNoodles" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 6 -->
+    <div id="Tiramisu">
+        <h3>6. 提拉米蘇拌不拌？</h3>
+        <label>
+            <input type="radio" name="Tiramisu" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Tiramisu" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Tiramisu" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        </div>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 7 -->
+    <div id="Bibimbap">
+        <h3>7. 石鍋拌飯拌不拌？</h3>
+        <label>
+            <input type="radio" name="Bibimbap" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Bibimbap" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Bibimbap" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 8 -->
+    <div id="SesamePasteNoodles">
+        <h3>8. 麻醬麵拌不拌？</h3>
+        <label>
+            <input type="radio" name="SesamePasteNoodles" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="SesamePasteNoodles" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="SesamePasteNoodles" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 9 -->
+    <div id="Donburi">
+        <h3>9. 丼飯拌不拌？</h3>
+        <label>
+            <input type="radio" name="Donburi" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Donburi" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Donburi" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 10 -->
+    <div id="Cake">
+        <h3>10. 蛋糕拌不拌？</h3>
+        <label>
+            <input type="radio" name="Cake" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Cake" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Cake" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 11 -->
+    <div id="Pudding">
+        <h3>11. 布丁拌不拌？</h3>
+        <label>
+            <input type="radio" name="Pudding" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Pudding" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Pudding" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 12 -->
+    <div id="BakedRice">
+        <h3>12. 焗烤飯拌不拌？</h3>
+        <label>
+            <input type="radio" name="BakedRice" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="BakedRice" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="BakedRice" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        </div>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 13 -->
+    <div id="ShrimpFriedRice">
+        <h3>13. 蝦仁炒飯拌不拌？</h3>
+        <label>
+            <input type="radio" name="ShrimpFriedRice" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ShrimpFriedRice" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ShrimpFriedRice" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 14 -->
+    <div id="Pasta">
+        <h3>14. 義大利麵拌不拌？</h3>
+        <label>
+            <input type="radio" name="Pasta" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Pasta" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Pasta" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 15 -->
+    <div id="RiceCake">
+        <h3>15. 米糕拌不拌？</h3>
+        <label>
+            <input type="radio" name="RiceCake" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="RiceCake" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="RiceCake" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 16 -->
+    <div id="Yogurt">
+        <h3>16. 優格拌不拌？</h3>
+        <label>
+            <input type="radio" name="Yogurt" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Yogurt" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Yogurt" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 17 -->
+    <div id="MilkCap">
+        <h3>17. 奶蓋拌不拌？</h3>
+        <label>
+            <input type="radio" name="MilkCap" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="MilkCap" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="MilkCap" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 18 -->
+    <div id="PuffPastrySoup">
+        <h3>18. 酥皮濃湯拌不拌？</h3>
+        <label>
+            <input type="radio" name="PuffPastrySoup" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="PuffPastrySoup" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="PuffPastrySoup" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 19 -->
+    <div id="ShredChickenRice">
+        <h3>19. 雞絲飯拌不拌？</h3>
+        <label>
+            <input type="radio" name="ShredChickenRice" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ShredChickenRice" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ShredChickenRice" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 20 -->
+    <div id="OreoMcFlurry">
+        <h3>20. OREO冰炫風拌不拌？</h3>
+        <label>
+            <input type="radio" name="OreoMcFlurry" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="OreoMcFlurry" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="OreoMcFlurry" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 21 -->
+    <div id="PorridgeAndMeatFloss">
+        <h3>21. 粥+肉鬆拌不拌？</h3>
+        <label>
+            <input type="radio" name="PorridgeAndMeatFloss" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="PorridgeAndMeatFloss" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="PorridgeAndMeatFloss" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 22 -->
+    <div id="Salad">
+        <h3>22. 沙拉拌不拌？</h3>
+        <label>
+            <input type="radio" name="Salad" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Salad" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="Salad" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 23 -->
+    <div id="FriedSauceNoodles">
+        <h3>23. 炸醬麵拌不拌？</h3>
+        <label>
+            <input type="radio" name="FriedSauceNoodles" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="FriedSauceNoodles" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="FriedSauceNoodles" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 24 -->
+    <div id="ZongZi">
+        <h3>24. 粽子拌不拌？</h3>
+        <label>
+            <input type="radio" name="ZongZi" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ZongZi" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="ZongZi" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 問題 25 -->
+    <div id="SoftTofu">
+        <h3>25. 豆花拌不拌？</h3>
+        <label>
+            <input type="radio" name="SoftTofu" value="要拌人"> 一定要拌啦！
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="SoftTofu" value="不拌人"> 到底誰會拌？
+        </label>
+        <br><br>
+        <label>
+            <input type="radio" name="SoftTofu" value="中壢人" checked="t"> 我保持中立😐
+        </label>
+        <br><br><hr><br><br>
+    </div>
+
+    <!-- 提交按鈕 -->
+    <div style="text-align: center;">
+        <input class="button" type="submit" value="查看結果">
+    </div>
+</form>
+
+<script>
+    const form = document.getElementById("FoodQuiz");
+
+    function FormData(id) {
+        const block = document.getElementById(id);
+        const inputs = block.querySelectorAll("input[type='radio']");
+        
+        for (const input of inputs) {
+            if (input.checked) {
+                return {
+                    value: input.value,
+                    question: id
+                };
+            }
+        }
+        return null;
+    }
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // 處理答案
+        const answers = {
+            CenturyEggTofu: FormData("CenturyEggTofu"),
+            Curry: FormData("Curry"),
+            BraisedPorkRice: FormData("BraisedPorkRice"),
+            ShavedIce: FormData("ShavedIce"),
+            ColdNoodles: FormData("ColdNoodles"),
+            Tiramisu: FormData("Tiramisu"),
+            Bibimbap: FormData("Bibimbap"),
+            SesamePasteNoodles: FormData("SesamePasteNoodles"),
+            Donburi: FormData("Donburi"),
+            Cake: FormData("Cake"),
+            Pudding: FormData("Pudding"),
+            BakedRice: FormData("BakedRice"),
+            ShrimpFriedRice: FormData("ShrimpFriedRice"),
+            Pasta: FormData("Pasta"),
+            RiceCake: FormData("RiceCake"),
+            Yogurt: FormData("Yogurt"),
+            MilkCap: FormData("MilkCap"),
+            PuffPastrySoup: FormData("PuffPastrySoup"),
+            ShredChickenRice: FormData("ShredChickenRice"),
+            OreoMcFlurry: FormData("OreoMcFlurry"),
+            PorridgeAndMeatFloss: FormData("PorridgeAndMeatFloss"),
+            Salad: FormData("Salad"),
+            FriedSauceNoodles: FormData("FriedSauceNoodles"),
+            ZongZi: FormData("ZongZi"),
+            SoftTofu: FormData("SoftTofu")
+        };
+
+        console.log(answers);
+
+        // 計算每個問題的最多數者答案
+        const answerCounts = {};
+        for (const question in answers) {
+            const answer = answers[question].value;
+            answerCounts[answer] = (answerCounts[answer] || 0) + 1;
+        }
+
+        // 找到最多數者答案
+        let maxCount = 0;
+        let maxAnswer = '';
+        for (const answer in answerCounts) {
+            if (answerCounts[answer] > maxCount) {
+                maxCount = answerCounts[answer];
+                maxAnswer = answer;
+            }
+        }
+
+        alert(`恭喜！你是 ${maxAnswer}`);
+    });
+</script>
+
+
+<br><br><br><br><br>
+<p class="p">程式碼有彩蛋🙂</p>
+<br><br><br>
+<h3 class="h3">特別感謝：<img src="Threads_logo.png" width="19" height="19">cofcat_0324
+    <br><img src="Threads_logo.png" width="19" height="19">bombbb_00</h3>
+
+</body>
+</html>
