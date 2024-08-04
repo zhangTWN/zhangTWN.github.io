@@ -33,3 +33,9 @@ h1 {
     font-size: 50px;
     position: fixed; top: 150px;
 }
+
+.NyanCat {
+    min-height: 500px;
+    max-height: 600px;
+    position: fixed; top: 100px; right: 200px;
+}
