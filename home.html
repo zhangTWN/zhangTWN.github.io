@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>首頁 | Zhang.</title>
     <link rel="icon" type="image/x-icon" href="Nyan Cat.gif">
-    <style>
+        <style>
         @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
         body {
             background: rgb(9, 95, 165);
@@ -36,46 +36,21 @@
             font-weight: 600;
         }
 
-        .wavy span2 {
+        h1 {
+            text-shadow: 0px 3px 0px #b2a98f,
+                0px 8px 10px rgba(0,0,0,0.15),
+                0px 18px 2px rgba(0,0,0,0.1),
+                0px 28px 30px rgba(0,0,0,0.1);
             font-size: 50px;
-            display: inline-block;
-            text-transform: uppercase;
-            animation: animate 4s ease-in-out infinite;
-            animation-delay: calc(0.2s * var(--i)); 
         }
 
-        @keyframes animate {
-            0% {
-                transform: translateY(0px);
-            }
-            20% {
-                transform: translateY(-20px);
-            }
-            40%, 100% {
-                transform: translateY(0px);
-            }
-        }
-
-        .wavy {
-          -webkit-box-reflect: below -15px linear-gradient(transparent, rgba(30, 82, 186, 0.2));
-        }
 </style>
 </head>
 <body>
-    <div class="wavy">
-        <span2 style="--i:1;">z</span2>
-        <span2 style="--i:2;">h</span2>
-        <span2 style="--i:3;">a</span2>
-        <span2 style="--i:4;">n</span2>
-        <span2 style="--i:5;">g</span2>
-        <span2 style="--i:6;">.</span2>
-        <span style="font-size: 50px;"> | </span>
-        <span2 style="--i:8;">首</span2>
-        <span2 style="--i:9;">頁</span2>
-    </div>
+    <h1>ZHANG. | 首頁</h1>
 
     <a style="color: #fff;" href="FoodQuiz.html">測測看你是不是拌人</a>
 
-    <img class="img" height="75%" src="Nyan Cat.gif" />
+    <img class="img" height="75%, auto" src="Nyan Cat.gif" />
 </body>
 </html>
