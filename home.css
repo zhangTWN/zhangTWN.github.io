@@ -42,7 +42,7 @@ a {
 
 @media (min-width: 1025px) {
     .NyanCat {
-        max-height: 500px; /* 電腦最大高度 */
+        min-height: 500px; /* 電腦最大高度 */
         position: absolute;
         top: 100px;
         right: 200px;
@@ -51,7 +51,7 @@ a {
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .NyanCat {
-        max-height: 100px; /* 平板最大高度 */
+        max-height: 50px; /* 平板最大高度 */
         position: absolute;
         top: 75px;
         right: 100px;
