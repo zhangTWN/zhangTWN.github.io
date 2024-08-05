@@ -50,3 +50,11 @@ h1 {
     background-color: #04AA6D;
     color: rgb(255, 255, 255);
 }
+
+a {
+    text-decoration: none;
+    font-family: "Noto Sans TC", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+}
