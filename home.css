@@ -51,7 +51,7 @@ a {
 
 @media (min-width: 720px) and (max-width: 1024px) {
     .NyanCat {
-        min-height: 100px;
+        max-height: 100px;
         position: absolute;
         top: 75px;
         right: 100px;
