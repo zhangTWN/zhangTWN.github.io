@@ -13,5 +13,53 @@
     <a style="color: #fff;" href="index.html">測測看你是不是拌人</a>
     
     <img class="NyanCat" src="File/Nyan Cat.gif" />
+
+    <script>
+        function isMobile() {
+            try {
+                document.createEvent("TouchEvent");
+                return true;
+            } catch (e) {
+                return false;
+            }
+        }
+
+        function detectDevice() {
+            if (isMobile()) {
+                const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                if (width >= 768) {
+                    return 'tablet';
+                } else {
+                    return 'mobile';
+                }
+            } else {
+                return 'desktop';
+            }
+        }
+
+        // 使用示例
+        window.addEventListener('load', function() {
+            const deviceType = detectDevice();
+            document.body.classList.add(deviceType);
+            console.log('設備類型:', deviceType);
+
+            // 根據設備類型執行不同的操作
+            switch (deviceType) {
+                case 'desktop':
+                    console.log('這是電腦');
+                    // 電腦特定代碼
+                    break;
+                case 'tablet':
+                    console.log('這是平板');
+                    // 平板特定代碼
+                    break;
+                case 'mobile':
+                    console.log('這是手機');
+                    // 手機特定代碼
+                    break;
+            }
+        });
+        
+    </script>
 </body>
 </html>
