@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 body {
-    background: rgb(9, 95, 165);
+    background: rgb(9, 95, 165); 
     width: 50%;
     height: 50%;
     display: flex;
@@ -40,18 +40,18 @@ a {
     width: auto;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .NyanCat {
-        min-height: 500px; /* 電腦最大高度 */
+        min-height: 500px;
         position: absolute;
         top: 100px;
         right: 200px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 720px) and (max-width: 1024px) {
     .NyanCat {
-        max-height: 50px; /* 平板最大高度 */
+        min-height: 100px;
         position: absolute;
         top: 75px;
         right: 100px;
