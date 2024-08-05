@@ -37,32 +37,26 @@ a {
 .NyanCat {
     max-width: 100%;
     height: auto;
-    width: auto;
 }
 
-@media (min-width: 1024px) {
-    .NyanCat {
-        min-height: 500px;
-        position: absolute;
-        top: 100px;
-        right: 200px;
-    }
+body.desktop .NyanCat {
+    min-height: 500px;
+    position: absolute;
+    top: 100px;
+    right: 200px;
 }
 
-@media (min-width: 720px) and (max-width: 1024px) {
-    .NyanCat {
-        max-height: 100px;
-        position: absolute;
-        top: 75px;
-        right: 100px;
-    }
+body.tablet .NyanCat {
+    max-height: 100px;
+    position: absolute;
+    top: 75px;
+    right: 100px;
 }
 
-@media (max-width: 768px) {
-    .NyanCat {
-        max-height: none; /* 手機不限制高度 */
-        position: static; /* 在手機上取消絕對定位 */
-        display: block;
-        margin: 20px auto; /* 居中顯示 */
-    }
+/* 手機設備樣式 */
+body.mobile .NyanCat {
+    max-height: none;
+    position: static;
+    display: block;
+    margin: 20px auto;
 }
